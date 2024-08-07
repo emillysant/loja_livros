@@ -38,4 +38,9 @@ public class LivrosController {
     public ResponseEntity<LivrosModel> addLivro(@RequestBody LivrosModel livro){
         return ResponseEntity.status(HttpStatus.CREATED).body(livroRepository.save(livro));
     }
+
+    @GetMapping("/genero/{genero}")
+    public List<LivrosModel> getLivrosByGenero(@PathVariable String genero) {
+        return livroRepository.findByGenero(genero);
+    }
 }

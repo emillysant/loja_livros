@@ -21,4 +21,6 @@ public class LivrosModel implements Serializable {
 
     private Double preco;
 
+    private String genero;
+
 }
